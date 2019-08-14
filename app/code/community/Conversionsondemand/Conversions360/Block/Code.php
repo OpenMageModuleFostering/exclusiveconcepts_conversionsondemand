@@ -48,12 +48,12 @@ class Conversionsondemand_Conversions360_Block_Code extends Mage_Checkout_Block_
    *
    * @return float
    */
-  public function getCartSubTotal()
+  /*public function getCartSubTotal()
   {
     $totals = Mage::getSingleton('checkout/cart')->getQuote()->getTotals();
     $subTotal = $totals["subtotal"]->getValue();
     return floatval($subTotal);
-  }
+  }*/
 
   /**
    * Retrieve the platform of the Magento store as per backend configuration.

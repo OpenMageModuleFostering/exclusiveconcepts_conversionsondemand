@@ -45,7 +45,10 @@ class Conversionsondemand_Conversions360_Model_Container_Identifier extends Ente
     $block->setLayout(Mage::app()->getLayout());
     $pageIdentifier = $this->_placeholder->getAttribute('pageIdentifier');
     $cartSubTotal = $this->_placeholder->getAttribute('cartSubTotal');
+    $cartItems = $this->_placeholder->getAttribute('cartItems');
+    $cod_cartDetails['cartSubTotal'] = $cartSubTotal;
+    $cod_cartDetails['cartItems'] = $cartItems;
 
-    return $block->codIdentifierHtml($pageIdentifier , $cartSubTotal);
+    return $block->codIdentifierHtml($pageIdentifier , $cod_cartDetails);
   }
 }

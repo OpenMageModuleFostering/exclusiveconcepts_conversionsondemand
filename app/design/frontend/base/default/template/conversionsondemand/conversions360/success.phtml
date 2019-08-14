@@ -7,7 +7,7 @@ var cod_ab_orderSubTotal = [<?php echo implode($orderSummary['subtotals'],',') ?
 var cod_ab_orderTotal = [<?php echo implode($orderSummary['totals'],',') ?>];
 var cod_ab_orderNum=[<?php echo implode($orderSummary['orderids'],',') ?>];
 var cod_ab_numOfItems=[<?php echo implode($orderSummary['numitems'],',') ?>];
-var cod_ab_orderSubTotalDiscounted = [<?php echo implode($orderSummary['discounts'],',') ?>];
+var cod_ab_orderSubTotalDiscounted = [<?php echo implode($orderSummary['discounts'],',') ?>];var cod_ab_orderEmail = ['<?php echo implode($orderSummary['emails'],"','") ?>'];
 <?php if(count($orderSummary['itemnames']) > 0): ?>
 var cod_ab_product_items=[<?php echo "[". implode($orderSummary['itemnames'],'],[') . "]"; ?>];
 <?php else: ?>

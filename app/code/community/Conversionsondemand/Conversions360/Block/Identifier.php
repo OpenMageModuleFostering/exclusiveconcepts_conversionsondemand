@@ -35,7 +35,7 @@ class Conversionsondemand_Conversions360_Block_Identifier extends Mage_Core_Bloc
    *
    * @return string
    */
-  public function codIdentifierHtml ($identifier, $cartSubTotal = 0)
+  public function codIdentifierHtml ($identifier, $cod_cartDetails)
   {
     $codConfig = Mage::helper('conversionsondemand_conversions360')->getCodConfig();
     $validIdentifiers = array('PRODUCT','CART','CHECKOUT','SUCCESS');
@@ -55,7 +55,8 @@ class Conversionsondemand_Conversions360_Block_Identifier extends Mage_Core_Bloc
     if(in_array($identifier,$validIdentifiers)){
       if($identifier == 'CART'){
         $autoDiscounterScript = '<script language=javascript>'
-        .'var cod_cartSubtotalAmt = parseFloat(' . $cartSubTotal . ');'
+        .'var cod_cartSubtotalAmt = parseFloat(' . $cod_cartDetails["cartSubTotal"] . ');'
+        .'var cod_cartItems = "' . $cod_cartDetails["cartItems"] . '";'
         . 'var COD_CONFIG= {"platform": "' . $codConfig['magentoEdition'] . '","stoken":"' . $codConfig['storeIdentifier'] . '"};'
         .'</script>'
         .'<script language="javascript" '
@@ -90,7 +91,9 @@ class Conversionsondemand_Conversions360_Block_Identifier extends Mage_Core_Bloc
   {
     $cacheKeyInfo = parent::getCacheKeyInfo();
     $cacheKeyInfo['pageIdentifier'] = $this->pageIdentifier;
-    $cacheKeyInfo['cartSubTotal'] = $this->getLayout()->getBlock('conversionsondemand_conversions360')->getCartSubTotal();
+    $cacheKeyInfo['cartSubTotal'] = Mage::helper('conversionsondemand_conversions360')->getCartSubTotal();
+    $cacheKeyInfo['cartItems'] = Mage::helper('conversionsondemand_conversions360')->getCartItems();    
+        
 
     return $cacheKeyInfo;
   }
@@ -102,7 +105,10 @@ class Conversionsondemand_Conversions360_Block_Identifier extends Mage_Core_Bloc
    */
   protected function _toHtml()
   {
-    $cartSubTotal = $this->getLayout()->getBlock('conversionsondemand_conversions360')->getCartSubTotal();
-    return $this->codIdentifierHtml($this->pageIdentifier, $cartSubTotal);
+    $cod_cartDetails = array();
+    //$cartSubTotal = Mage::helper('conversionsondemand_conversions360')->getCartSubTotal();
+    $cod_cartDetails['cartSubTotal'] = Mage::helper('conversionsondemand_conversions360')->getCartSubTotal();
+    $cod_cartDetails['cartItems'] = Mage::helper('conversionsondemand_conversions360')->getCartItems();
+    return $this->codIdentifierHtml($this->pageIdentifier, $cod_cartDetails);
   }
 }
