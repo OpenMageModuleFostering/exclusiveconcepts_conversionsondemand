@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+    <name>Exclusiveconcepts_Conversionsondemand</name>
+    <version>1.1.1</version>
+    <stability>stable</stability>
+    <license uri="https://www.conversionsondemand.com/codadmin2/files/COD-Master-Agreement.pdf">Conversions on Demand Terms Of Service</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Conversions On Demand is designed to prevent shoppers from leaving your site before making a purchase. Years of testing and data analysis power each application we make available through Conversions On Demand. The Conversions On Demand Suite includes a The Daily Deal Bar, The Cart Closer, and Time2Buy. All 3 are available separately or in combination to improve your store's conversion rate.</summary>
+    <description>Conversions On Demand is a comprehensive and easy to manage suite of services to improve conversion rates. &#xD;
+&#xD;
+The Cart Closer is designed to convert shoppers that abandon the cart before completing a sale. The Cart Closer displays a customizable offer to the shopper as they are exiting the cart to incent them to stay and complete a sale.                            &#xD;
+&#xD;
+The Daily Deal Bar enables you to schedule promotions days, weeks or months in advance. After uploading your promotions (including single-use coupon), you can forget about them and trust the Daily Deal Bar to automatically update your site and Twitter on the days and times that you've preconfigured.                                 &#xD;
+&#xD;
+Time2Buy is patent-pending technology that monitors the browsing behavior of shoppers on your site, and displays hyper time-sensitive offers to motivate shoppers to immediately buy from you. You can control the time, trigger behavior and offer value.&#xD;
+</description>
+    <notes>This is the stable version of Conversions On Demand.</notes>
+    <authors><author><name>Dan Theirl</name><user>dtheirl</user><email>dtheirl@exclusiveconcepts.com</email></author></authors>
+    <date>2012-06-11</date>
+    <time>11:27:56</time>
+    <contents><target name="magecommunity"><dir name="Conversionsondemand"><dir name="Conversions360"><dir name="Block"><file name="Code.php" hash="5b24a33c55d6988d2ebbff1310341a50"/><file name="Identifier.php" hash="ae99e5ab385fd825be17ef7ae812ecc4"/><dir name="Multishipping"><file name="Success.php" hash="91f894fed9c4b94ccb3cfcd346627f92"/></dir><file name="Success.php" hash="0544e1889e339aef0c3953fd00450684"/></dir><dir name="Helper"><file name="Data.php" hash="41d5e793d071a095f929c070a6eab43b"/></dir><dir name="Model"><dir name="Config"><dir name="Source"><file name="Edition.php" hash="a7268f311f457305189ca2906f2a7c41"/></dir></dir><dir name="Container"><file name="Code.php" hash="90e9cba3004db39fe2443c467fa0577d"/><file name="Identifier.php" hash="427b87bbdd3c82e13fa0136523973a11"/></dir><file name="Observer.php" hash="ebcbe407157dd30e71366dc5620ce1d7"/></dir><dir name="controllers"><file name="IndexController.php" hash="60d63f5bf5b208193567a72682475b02"/></dir><dir name="etc"><file name="cache.xml" hash="5f5c7e42e915f9607ee710d5b31bad5d"/><file name="config.xml" hash="75707d44e6b8296b68c37e624db1d409"/><file name="system.xml" hash="ab64016b6349164727277e4d075d6164"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Conversionsondemand_Conversions360.xml" hash="2ba3e087b9bf8d769741b89481dee559"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="conversionsondemand"><dir name="conversions360"><file name="conversions360.xml" hash="335ce03fe21e63ed1de64e2f4219998c"/></dir></dir></dir><dir name="template"><dir name="conversionsondemand"><dir name="conversions360"><file name="code.phtml" hash="77949fd564333bf8b0316229d056f0b8"/><file name="success.phtml" hash="0f4f25812b1484d69e8b6285213ef616"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.1</min><max>5.4.3</max></php></required></dependencies>
+</package>

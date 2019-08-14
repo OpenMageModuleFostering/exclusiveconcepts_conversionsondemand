@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Exclusiveconcepts_Conversionsondemand",
+    "type": "magento-module",
+    "license": "Conversions-on-Demand-Terms-Of-Service",
+    "homepage": "",
+    "description": "Conversions On Demand is designed to prevent shoppers from leaving your site before making a purchase. Years of testing and data analysis power each application we make available through Conversions On Demand. The Conversions On Demand Suite includes a The Daily Deal Bar, The Cart Closer, and Time2Buy. All 3 are available separately or in combination to improve your store's conversion rate.",
+    "authors": [
+    {
+        "name": "Dan Theirl",
+        "email": "dtheirl@exclusiveconcepts.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
